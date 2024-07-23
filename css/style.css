@@ -1,5 +1,25 @@
+* {
+  margin: 0;
+}
+
 body {
+  box-sizing: border-box;
   background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: solid 3px black;
+  background-color: blue;
+}
+.box--1 {
+  height: 100px;
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
