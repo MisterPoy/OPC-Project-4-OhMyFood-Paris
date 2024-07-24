@@ -28,7 +28,7 @@ body {
 }
 
 header {
-@include center;
+   @include center;
    @include box-shadow-bottom;
    width: 100%;
    height: 63px;
@@ -36,5 +36,36 @@ header {
         font-family: Shrikhand;
         font-size: 30px;
      }
+   position: relative;
+   z-index: 3;  
 }
  
+.location {
+
+    height: 50px;
+    @include center;
+    background-color: $tertiary-bg-color;
+    position: relative;
+    z-index: 2;
+    @include box-shadow-bottom;
+        .location--i {
+        font-size: 18px;
+        color: $footer-background-color;
+    }
+        #city {
+            background: none;
+            border-style: none;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            width: 135px;
+            #city:hover {
+                border: none;
+            } 
+    }
+}
+
+#city::placeholder {
+    color: $footer-background-color;
+}
