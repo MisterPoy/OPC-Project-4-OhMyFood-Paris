@@ -22,15 +22,50 @@
     <body>
         <div class="main-container">
             <header>
-                <h1 class="logotitle">ohmyfood</h1>
+                <img src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" class="logo">
             </header>
             <main>
-                 <form method="get" action="" class="location">
-                    <label for="city" class="location--i">
-                        <i class="fa-solid fa-location-dot"></i> 
-                    </label>
-                    <input type="text" name="ville" id="city" placeholder="Paris, Belleville" class="form--input">
-                </form>
+                <section class="location">
+                    <form method="get" action="#">
+                        <label for="city" class="location--i">
+                            <i class="fa-solid fa-location-dot"></i> 
+                        </label>
+                        <input type="text" name="ville" id="city" placeholder="Paris, Belleville" class="form--input">
+                    </form>
+                </section>
+                <nav class="explore">
+                    <h2>Réservez le menu qui<br> vous convient</h2>
+                    <div>
+                        <p>Découvrez des restaurants d’exception,<br> sélectionnés par nos soins.</p>
+                    </div>
+                    <a class="explore--link" href="#restaurants">Explorer nos restaurants</a>    
+                </nav>
+                <section class="informations">
+                    <h2 class="informations--title">Fonctionnement</h2>
+                    <article class="informations--cards">
+                        <a href="#">
+                        <button class="informations--button">
+                            <span class="ellipse">1</span>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h4>Choisissez un restaurant</h4> 
+                        </button>
+                        </a>
+                        <button class="informations--button">
+                            <span class="ellipse">2</span>
+                            <i class="fa-solid fa-list-ul"></i>
+                            <h4>Composez votre menu</h4> 
+                        </button>
+                        <button class="informations--button">
+                            <span class="ellipse">3</span>
+                            <i class="fa-solid fa-store"></i>
+                            <h4>Dégustez au restaurant</h4> 
+                        </button>
+                    </article>
+                </section>
+                <nav id="restaurants">
+                    <h2 class="restaurants--title">Restaurants</h2>
+
+                </nav>
             </main>
             <footer>
             </footer>

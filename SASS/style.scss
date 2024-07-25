@@ -2,11 +2,19 @@
     margin: 0;
 }
 
+//color-variable
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
 $main-bg-color: #FFFFFF;
 $secondary-bg-color: #F6F6F6;
 $tertiary-bg-color: #EAEAEA;
 $footer-background-color: #353535;
 
+$explore--gradient: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+$explore--gradient_hover: linear-gradient(0deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.25) 100%), linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+
+//Mixines
 @mixin center { 
     display: flex;
     justify-content: center;
@@ -16,6 +24,10 @@ $footer-background-color: #353535;
 @mixin box-shadow-bottom {
     -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.30); 
     box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.30);
+}
+
+@mixin box-shadow-button ($box-shadow) {
+    box-shadow: $box-shadow;
 }
 
 body {
@@ -32,40 +44,147 @@ header {
    @include box-shadow-bottom;
    width: 100%;
    height: 63px;
-    h1 {
-        font-family: Shrikhand;
-        font-size: 30px;
-     }
    position: relative;
    z-index: 3;  
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Roboto", serif;
+    font-size: 18;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    font-weight: 500;
+}
  
 .location {
-
     height: 50px;
     @include center;
     background-color: $tertiary-bg-color;
     position: relative;
     z-index: 2;
     @include box-shadow-bottom;
+       
         .location--i {
         font-size: 18px;
         color: $footer-background-color;
-    }
+        }
         #city {
             background: none;
             border-style: none;
+            outline: none;
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
             text-align: center;
-            width: 135px;
-            #city:hover {
-                border: none;
-            } 
-    }
+            width: 135px;   
+        }
 }
 
 #city::placeholder {
     color: $footer-background-color;
 }
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: $secondary-bg-color;
+    padding: 35px;
+        h2 {
+            text-align: center;
+        }
+        p {font-family: "Roboto", serif;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+        }
+            &--link  {
+                width: 218px;
+                height: 50px;
+                margin: 20px;
+                font-family: "Roboto", serif;
+                text-decoration: none;
+                color: $main-bg-color;
+                font-size: 16px;
+                font-weight: 500;
+                background: $explore--gradient;
+                border-radius: 25px;
+                @include box-shadow-button (0px 4px 10px 0px #00000040);
+                @include center;
+            }
+            &--link:hover {
+                background: $explore--gradient_hover;
+                @include box-shadow-button (0px 4px 15px 0px #00000059);
+            }
+}
+// FONCTIONNEMENT
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 50px 20px 50px 20px;
+}
+
+.informations--cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 14px;
+}
+.informations--button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 25px;
+    width: 100%;
+    height: 72px;
+    border-style: none;
+    border-radius: 20px;
+    padding-left: 25px;
+    @include box-shadow-button (0px 4px 10px 0px #00000040);
+    .ellipse {
+        position: absolute;
+        left: -14px;
+        @include center;
+        width: 24px;
+        height: 24px;
+        font-family: "Roboto", serif;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 15px;
+        color: $secondary-bg-color;
+        background-color: $primary-color;
+    }
+    .fa-solid {
+        font-size: 19px;
+        color: #7E7E7E;
+    }
+        &:hover {
+            cursor: pointer;
+            > .fa-solid {
+                color: $primary-color;
+            } 
+        }    
+}
+
