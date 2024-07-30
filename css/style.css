@@ -1,22 +1,27 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   background-color: inherit;
 }
 
 .main-container {
   width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 0px 6px 9px -5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 6px 9px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   width: 100%;
   height: 63px;
   position: relative;
@@ -37,11 +42,11 @@ h2 {
 
 h3 {
   font-family: "Roboto", serif;
-  font-size: 18;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-h4 {
+h5 {
   font-family: "Roboto", serif;
   font-size: 16px;
   font-weight: 500;
@@ -55,8 +60,8 @@ h4 {
   background-color: #EAEAEA;
   position: relative;
   z-index: 2;
-  -webkit-box-shadow: 0px 6px 9px -5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 6px 9px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .location .location--i {
   font-size: 18px;
@@ -94,6 +99,9 @@ h4 {
   font-weight: 300;
   text-align: center;
 }
+.explore br {
+  display: none;
+}
 .explore--link {
   width: 218px;
   height: 50px;
@@ -119,7 +127,7 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 35px;
-  margin: 50px 20px 50px 20px;
+  margin: 50px 20px 65px 20px;
 }
 
 .informations--cards {
@@ -168,6 +176,223 @@ h4 {
 }
 .informations--button:hover > .fa-solid {
   color: #9356DC;
+}
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: #F6F6F6;
+  padding: 70px 20px 70px 20px;
+}
+#restaurants --title {
+  padding-left: 5px;
+}
+#restaurants .restaurants--cardsbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#restaurants .restaurants--cardsbox a {
+  width: 100%;
+}
+#restaurants .restaurants--card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+#restaurants .restaurants--badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+}
+#restaurants .restaurants--badge > p {
+  font-family: "Roboto", serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+#restaurants .restaurants--card-img {
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+#restaurants .restaurants--card-img_1 {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: 50% 50%;
+}
+#restaurants .restaurants--card-img_2 {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position: 50% -85%;
+}
+#restaurants .restaurants--card-img_3 {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position: 50% 80%;
+}
+#restaurants .restaurants--card-img_4 {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-position: 50% 80%;
+}
+#restaurants .restaurants--cardcontent {
+  position: relative;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 15px;
+}
+#restaurants .restaurants--cardcontent .fa-heart {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  font-size: 22px;
+}
+#restaurants .restaurants--cardcontent .fa-solid.fa-heart {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+}
+#restaurants .restaurants--cardcontent p {
+  font-family: "Roboto", serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+footer {
+  background-color: #353535;
+  padding-bottom: 25px;
+}
+footer .footer-logo {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 0 20px 0;
+  color: #FFFFFF;
+  margin-left: 30px;
+}
+footer .footer--linkcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #FFFFFF;
+  padding-left: 30px;
+}
+footer .footer--linkcontainer .separate {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .footer--linkcontainer .footer--link a {
+  display: flex;
+  gap: 8px;
+}
+footer .footer--linkcontainer .footer--link_txt {
+  font-family: "Roboto", serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer .footer--linkcontainer .footer--link_i {
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  #restaurants .restaurants--cardcontent {
+    gap: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .informations .informations--cards {
+    flex-direction: row;
+  }
+  .informations .informations--button {
+    gap: 10px;
+    padding-left: 15px;
+  }
+  #restaurants {
+    padding: 30px 80px 30px 80px;
+  }
+  #restaurants .restaurants--cardsbox {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #restaurants .restaurants--cardsbox a {
+    width: 48%;
+  }
+  #restaurants .restaurants--cardcontent {
+    gap: 5px;
+  }
+  footer {
+    padding-bottom: 0;
+    padding-top: 35px;
+    padding-right: 35px;
+  }
+  footer .footer--container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .footer--container .footer-logo {
+    margin-left: 33px;
+    padding-top: 5px;
+  }
+  footer .footer--container .footer--linkcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .footer--container .footer--linkcontainer .separate {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .informations {
+    margin: 50px 150px;
+  }
+  .informations .informations--button {
+    gap: 10px;
+    padding-left: 15px;
+  }
+  #restaurants {
+    padding: 30px 150px 30px 150px;
+  }
+  #restaurants .restaurants--cardsbox {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #restaurants .restaurants--cardsbox a {
+    width: 48%;
+  }
+  footer {
+    padding: 45px 100px 15px 0px;
+  }
+  footer .footer--container {
+    gap: 50px;
+  }
+  footer .footer-logo {
+    margin-left: 33px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
