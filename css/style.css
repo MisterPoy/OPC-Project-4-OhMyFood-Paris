@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  justify-content: center;
   background-color: inherit;
 }
 
@@ -16,16 +15,10 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  width: 100%;
-  height: 63px;
-  position: relative;
-  z-index: 3;
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 a {
@@ -46,10 +39,39 @@ h3 {
   font-weight: 700;
 }
 
+h4 {
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 h5 {
   font-family: "Roboto", serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  width: 100%;
+  height: 63px;
+  position: relative;
+}
+header .go-back {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+header span.logo {
+  font-family: "Shrikhand", serif;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .location {
@@ -90,6 +112,28 @@ h5 {
   background-color: #F6F6F6;
   padding: 35px;
 }
+.explore a.explore--link {
+  position: relative;
+  width: 218px;
+  height: 50px;
+  margin: 20px;
+  font-family: "Roboto", serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 700ms;
+}
+.explore a.explore--link:hover {
+  opacity: 0.3;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
 .explore h2 {
   text-align: center;
 }
@@ -101,26 +145,6 @@ h5 {
 }
 .explore br {
   display: none;
-}
-.explore--link {
-  width: 218px;
-  height: 50px;
-  margin: 20px;
-  font-family: "Roboto", serif;
-  text-decoration: none;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.explore--link:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .informations {
@@ -170,6 +194,8 @@ h5 {
 .informations--button .fa-solid {
   font-size: 19px;
   color: #7E7E7E;
+  transition-property: color;
+  transition-duration: 700ms;
 }
 .informations--button:hover {
   cursor: pointer;
@@ -265,10 +291,21 @@ h5 {
   right: 5%;
   font-size: 22px;
 }
-#restaurants .restaurants--cardcontent .fa-solid.fa-heart {
+#restaurants .restaurants--cardcontent .heart-thin {
+  opacity: 1;
+}
+#restaurants .restaurants--cardcontent .heart-thin:hover {
+  opacity: 0.1;
+}
+#restaurants .restaurants--cardcontent .heart-full {
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
   color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+#restaurants .restaurants--cardcontent .heart-full:hover {
+  opacity: 1;
 }
 #restaurants .restaurants--cardcontent p {
   font-family: "Roboto", serif;
@@ -393,6 +430,121 @@ footer .footer--linkcontainer .footer--link_i {
   footer .footer-logo {
     margin-left: 33px;
   }
+}
+.banner-container {
+  width: 100%;
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  aspect-ratio: 4/1.8;
+  background-size: cover;
+  background-position: 50% 60%;
+  /*.banner--img {
+          background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+          background-size: cover;
+          width: 100%;
+          aspect-ratio: 4 / 1.8;
+          object-fit: cover;
+  }*/
+  /*.banner--radius-bottom {
+      height: 30px;
+      background-color: #F6F6F6; 
+      border-radius: 25px 25px 0 0;
+      border: dashed red;
+      background-clip: border-box;
+  }*/
+}
+
+.menu {
+  background-color: #F6F6F6;
+  width: 100%;
+  padding: 10px 17px 40px 17px;
+  position: relative;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  top: -49px;
+  left: 0;
+  right: 0;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 50px;
+  border-radius: 50px 50px 0 0;
+}
+.menu .menu--title {
+  position: relative;
+}
+.menu .menu--title .fa-heart {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  font-size: 22px;
+}
+.menu .menu--title .heart-thin {
+  opacity: 1;
+}
+.menu .menu--title .heart-thin:hover {
+  opacity: 0;
+}
+.menu .menu--title .heart-full {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.menu .menu--title .heart-full:hover {
+  opacity: 1;
+}
+
+.menu--section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0 30px 0;
+}
+.menu--section_title {
+  position: relative;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 6px;
+  z-index: 0;
+}
+.menu--section_title::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+  z-index: 1;
+}
+.menu--section .menu--button {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.menu--section .menu--button-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu--section .menu--button-content .button--txt {
+  font-family: "Roboto", serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu--section .menu--button .price {
+  font-family: "Roboto", serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: end;
 }
 
 /*# sourceMappingURL=style.css.map */
