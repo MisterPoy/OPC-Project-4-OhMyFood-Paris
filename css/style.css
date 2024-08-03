@@ -104,7 +104,7 @@ header span.logo {
   color: #353535;
 }
 
-.explore {
+.presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +112,7 @@ header span.logo {
   background-color: #F6F6F6;
   padding: 35px;
 }
-.explore a.explore--link {
+.presentation a.presentation--button {
   position: relative;
   width: 218px;
   height: 50px;
@@ -130,20 +130,20 @@ header span.logo {
   align-items: center;
   transition: opacity 700ms;
 }
-.explore a.explore--link:hover {
+.presentation a.presentation--button:hover {
   opacity: 0.3;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
-.explore h2 {
+.presentation h2 {
   text-align: center;
 }
-.explore p {
+.presentation p {
   font-family: "Roboto", serif;
   font-size: 18px;
   font-weight: 300;
   text-align: center;
 }
-.explore br {
+.presentation br {
   display: none;
 }
 
@@ -456,7 +456,7 @@ footer .footer--linkcontainer .footer--link_i {
 .menu {
   background-color: #F6F6F6;
   width: 100%;
-  padding: 10px 17px 40px 17px;
+  padding: 10px 17px 0 17px;
   position: relative;
 }
 .menu::before {
@@ -545,6 +545,36 @@ footer .footer--linkcontainer .footer--link_i {
   font-size: 15px;
   font-weight: 500;
   text-align: end;
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  background-color: #FFFFFF;
+}
+.commander .command--button {
+  position: relative;
+  width: 218px;
+  height: 50px;
+  margin: 20px;
+  font-family: "Roboto", serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 700ms;
+}
+.commander .command--button:hover {
+  opacity: 0.3;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 /*# sourceMappingURL=style.css.map */
