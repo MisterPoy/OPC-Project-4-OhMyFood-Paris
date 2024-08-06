@@ -15,6 +15,12 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
   font-family: "Shrikhand", serif;
   font-size: 28px;
@@ -131,7 +137,7 @@ header span.logo {
   transition: opacity 700ms;
 }
 .presentation a.presentation--button:hover {
-  opacity: 0.3;
+  opacity: 0.7;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 .presentation h2 {
@@ -350,87 +356,6 @@ footer .footer--linkcontainer .footer--link_i {
   height: 100%;
 }
 
-@media (min-width: 600px) {
-  #restaurants .restaurants--cardcontent {
-    gap: 15px;
-  }
-}
-@media (min-width: 768px) {
-  .informations .informations--cards {
-    flex-direction: row;
-  }
-  .informations .informations--button {
-    gap: 10px;
-    padding-left: 15px;
-  }
-  #restaurants {
-    padding: 30px 80px 30px 80px;
-  }
-  #restaurants .restaurants--cardsbox {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  #restaurants .restaurants--cardsbox a {
-    width: 48%;
-  }
-  #restaurants .restaurants--cardcontent {
-    gap: 5px;
-  }
-  footer {
-    padding-bottom: 0;
-    padding-top: 35px;
-    padding-right: 35px;
-  }
-  footer .footer--container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  footer .footer--container .footer-logo {
-    margin-left: 33px;
-    padding-top: 5px;
-  }
-  footer .footer--container .footer--linkcontainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-  }
-  footer .footer--container .footer--linkcontainer .separate {
-    flex-direction: row;
-  }
-}
-@media (min-width: 1024px) {
-  .informations {
-    margin: 50px 150px;
-  }
-  .informations .informations--button {
-    gap: 10px;
-    padding-left: 15px;
-  }
-  #restaurants {
-    padding: 30px 150px 30px 150px;
-  }
-  #restaurants .restaurants--cardsbox {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  #restaurants .restaurants--cardsbox a {
-    width: 48%;
-  }
-  footer {
-    padding: 45px 100px 15px 0px;
-  }
-  footer .footer--container {
-    gap: 50px;
-  }
-  footer .footer-logo {
-    margin-left: 33px;
-  }
-}
 .banner-container {
   width: 100%;
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -456,6 +381,7 @@ footer .footer--linkcontainer .footer--link_i {
 .menu {
   background-color: #F6F6F6;
   width: 100%;
+  max-width: 1024px;
   padding: 10px 17px 0 17px;
   position: relative;
 }
@@ -523,28 +449,73 @@ footer .footer--linkcontainer .footer--link_i {
 .menu--section .menu--button {
   display: flex;
   justify-content: space-between;
-  align-items: end;
-  padding: 10px;
-  width: 100%;
+  position: relative;
+  height: 69px;
+  padding-right: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  overflow: hidden;
+  transition: all 750ms;
+}
+.menu--section .menu--button:hover {
+  padding-right: 60px;
 }
 .menu--section .menu--button-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 15px;
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu--section .menu--button-content .button--txt {
   font-family: "Roboto", serif;
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu--section .menu--button-content .button--title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu--section .menu--button .price {
   font-family: "Roboto", serif;
   font-size: 15px;
   font-weight: 500;
-  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  height: 100%;
+  transition: all 750ms;
+}
+.menu--section .menu--button::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -60px;
+  min-width: 59px;
+  height: 100%;
+  font-family: "Font Awesome 6 Free";
+  font-size: 20px;
+  content: "\f058";
+  font-weight: 900;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  transition: all 750ms;
+}
+.menu--section .menu--button:hover::after {
+  right: 0px;
 }
 
 .commander {
@@ -552,7 +523,7 @@ footer .footer--linkcontainer .footer--link_i {
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
-  background-color: #FFFFFF;
+  background-color: #F6F6F6;
 }
 .commander .command--button {
   position: relative;
@@ -573,8 +544,96 @@ footer .footer--linkcontainer .footer--link_i {
   transition: opacity 700ms;
 }
 .commander .command--button:hover {
-  opacity: 0.3;
+  opacity: 0.7;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+
+@media (min-width: 600px) {
+  #restaurants .restaurants--cardcontent {
+    gap: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .informations .informations--cards {
+    flex-direction: row;
+  }
+  .informations .informations--button {
+    gap: 10px;
+    padding-left: 15px;
+  }
+  #restaurants {
+    padding: 30px 80px 30px 80px;
+  }
+  #restaurants .restaurants--cardsbox {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #restaurants .restaurants--cardsbox a {
+    width: 48%;
+  }
+  #restaurants .restaurants--cardcontent {
+    gap: 5px;
+  }
+  footer {
+    padding-bottom: 0;
+    padding-top: 35px;
+    padding-right: 35px;
+  }
+  footer .footer--container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .footer--container .footer-logo {
+    margin-left: 33px;
+    padding-top: 5px;
+  }
+  footer .footer--container .footer--linkcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .footer--container .footer--linkcontainer .separate {
+    flex-direction: row;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px 0 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .informations {
+    margin: 50px 150px;
+  }
+  .informations .informations--button {
+    gap: 10px;
+    padding-left: 15px;
+  }
+  #restaurants {
+    padding: 30px 150px 30px 150px;
+  }
+  #restaurants .restaurants--cardsbox {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #restaurants .restaurants--cardsbox a {
+    width: 48%;
+  }
+  footer {
+    padding: 45px 100px 15px 0px;
+  }
+  footer .footer--container {
+    gap: 50px;
+  }
+  footer .footer-logo {
+    margin-left: 33px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
