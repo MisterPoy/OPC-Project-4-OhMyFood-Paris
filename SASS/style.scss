@@ -57,6 +57,7 @@ $presentation--gradient_hover: linear-gradient(0deg, rgba(255,255,255,0.25) 0%, 
 }
 .heart--i {
     @include center;
+    width: 22px;
     .fa-heart {
         position: absolute;
         font-size: 22px;
@@ -436,7 +437,9 @@ footer {
         }
     .menu--title {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        padding-right: 25px;
+        gap: 20px;
         position: relative;
      }
 }
@@ -608,7 +611,8 @@ footer {
         
         padding: 0 100px 0 100px;
         .menu--title {
-           
+           justify-content: center;
+           padding-right: 0;
             
         }
     }

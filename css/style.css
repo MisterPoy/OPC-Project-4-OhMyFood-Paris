@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 22px;
 }
 .heart--i .fa-heart {
   position: absolute;
@@ -417,7 +418,9 @@ footer .footer--linkcontainer .footer--link_i {
 }
 .menu .menu--title {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-right: 25px;
+  gap: 20px;
   position: relative;
 }
 
@@ -603,6 +606,10 @@ footer .footer--linkcontainer .footer--link_i {
     flex-direction: column;
     justify-content: center;
     padding: 0 100px 0 100px;
+  }
+  .menu .menu--title {
+    justify-content: center;
+    padding-right: 0;
   }
 }
 @media (min-width: 1024px) {
