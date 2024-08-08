@@ -648,6 +648,7 @@ footer .footer--linkcontainer .footer--link_i {
     gap: 15px;
   }
 }
+/*********** menu animations ********************/
 .menu--button {
   animation: 2s linear 0.5s menuloader;
 }
