@@ -662,8 +662,7 @@ footer {
 }
 
 .menu--button {
-    animation-name: menuloader;
-    animation-duration: 3s;
+    animation: 3s linear 1s menuloader;
 }
 
 .menu--button1 {
@@ -685,11 +684,7 @@ footer {
         margin-right: 100%;
         opacity: 0;
     }
-    50% {
-        margin-bottom: 50%;
-        margin-right: 50%;
-        opacity: 0.5;
-    }
+   
     100% {
         margin-bottom: 0;
         margin-right: 0;
