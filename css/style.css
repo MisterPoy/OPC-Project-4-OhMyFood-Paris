@@ -643,22 +643,48 @@ footer .footer--linkcontainer .footer--link_i {
     margin-left: 33px;
   }
 }
-/*
-.menu--section_entrees {
-    animation-name: entrees;
-    animation-duration: 4s;
+@media (min-width: 1440px) {
+  #restaurants .restaurants--cardcontent .card-txt {
+    gap: 15px;
+  }
+}
+.menu--button {
+  animation-name: menuloader;
+  animation-duration: 3s;
 }
 
-@keyframes entrees {
-    from {
-        margin-right: 100vh;
-        opacity: 0;
-    }
-    to {
-        margin-right: 0;
-        opacity: 1;
-    }
+.menu--button1 {
+  animation-delay: 250ms;
+}
 
-} */
+.menu--button2 {
+  animation-delay: 750ms;
+}
+
+.menu--button3 {
+  animation-delay: 1500ms;
+}
+
+.menu--button4 {
+  animation-delay: 2250ms;
+}
+
+@keyframes menuloader {
+  0% {
+    margin-bottom: 100%;
+    margin-right: 100%;
+    opacity: 0;
+  }
+  50% {
+    margin-bottom: 50%;
+    margin-right: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    margin-bottom: 0;
+    margin-right: 0;
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
