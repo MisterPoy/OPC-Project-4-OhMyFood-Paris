@@ -25,14 +25,14 @@
                  <span class="logo">ohmyfood</span>
             </header>
             <main>
-                <section class="location">
+                <div class="location">
                     <form method="get" action="#">
                         <label for="city" class="location--i">
                             <i class="fa-solid fa-location-dot"></i> 
                         </label>
                         <input type="text" name="ville" id="city" placeholder="Paris, Belleville" class="form--input">
                     </form>
-                </section>
+                </div>
                 <nav class="presentation">
                     <h2>Réservez le menu qui<br> vous convient</h2>
                     <div>
@@ -43,27 +43,27 @@
                 <section class="informations">
                     <h2 class="informations--title">Fonctionnement</h2>
                     <article class="informations--cards">
-                        <button class="informations--button">
+                        <div class="informations--button">
                             <span class="ellipse">1</span>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <h5>Choisissez un restaurant</h5> 
-                        </button>
-                        <button class="informations--button">
+                        </div>
+                        <div class="informations--button">
                             <span class="ellipse">2</span>
                             <i class="fa-solid fa-list-ul"></i>
                             <h5>Composez votre menu</h5> 
-                        </button>
-                        <button class="informations--button">
+                        </div>
+                        <div class="informations--button">
                             <span class="ellipse">3</span>
                             <i class="fa-solid fa-store"></i>
                             <h5>Dégustez au restaurant</h5> 
-                        </button>
+                        </div>
                     </article>
                 </section>
-                <div id="restaurants">
+                <section id="restaurants">
                     <h2 class="restaurants--title">Restaurants</h2>
-                    <section class="restaurants--cardsbox">
-                        <a href="./restaurants/restaurant1.html">
+                    <div class="restaurants--cardsbox">
+                        <a href="./restaurants/la-palette-du-gout.html">
                             <article class="restaurants--card">
                                 <div class="restaurants--badge">
                                     <p>Nouveau</p>
@@ -81,7 +81,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="./restaurants/restaurant2.html">
+                        <a href="./restaurants/la-note-enchantee.html">
                             <article class="restaurants--card">
                                 <div class="restaurants--badge">
                                     <p>Nouveau</p>
@@ -99,7 +99,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="./restaurants/restaurant3.html">
+                        <a href="./restaurants/a-la-francaise.html">
                             <article class="restaurants--card">
                                 <div class="restaurants--card-img restaurants--card-img_3"></div>
                                 <div class="restaurants--cardcontent">
@@ -114,7 +114,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="./restaurants/restaurant4.html">
+                        <a href="./restaurants/le-delice-des-sens.html">
                             <article class="restaurants--card">
                                 <div class="restaurants--card-img restaurants--card-img_4"></div>
                                 <div class="restaurants--cardcontent">
@@ -129,23 +129,23 @@
                                 </div>
                             </article>
                         </a>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </main>
             <footer>
-                <dl class="footer--container">
-                    <dt class="footer-logo"><a href="">ohmyfood</a></dt>
+                <section class="footer--container">
+                    <a href="index.html" class="footer-logo"><h6>ohmyfood</h6></a>
                     <div class="footer--linkcontainer">
-                        <div class="separate">    
-                            <dd class="footer--link"><a href=""><i class="fa-solid fa-utensils footer--link_i"></i><span class="footer--link_txt">Proposer un restaurant</span></a></dd>
-                            <dd class="footer--link"><a href=""><i class="fa-solid fa-handshake-angle footer--link_i"></i><span class="footer--link_txt">Devenir partenaire</span></a></dd>
-                        </div>
-                        <div class="separate">
-                            <dd class="footer--link"><a href=""><span class="footer--link_txt">Mentions Légales</span></a></dd>
-                            <dd class="footer--link"><a href=""><span class="footer--link_txt">Contact</span></a></dd>
-                        </div>    
+                        <ul class="separate">    
+                            <li class="footer--link"><a href=""><i class="fa-solid fa-utensils footer--link_i"></i><span class="footer--link_txt">Proposer un restaurant</span></a></li>
+                            <li class="footer--link"><a href=""><i class="fa-solid fa-handshake-angle footer--link_i"></i><span class="footer--link_txt">Devenir partenaire</span></a></li>
+                        </ul>
+                        <ul class="separate">
+                            <li class="footer--link"><a href=""><span class="footer--link_txt">Mentions Légales</span></a></li>
+                            <li class="footer--link"><a href="mailto:ohmyfood@ohmyfood.fr"><span class="footer--link_txt">Contact</span></a></li>
+                        </ul>    
                     </div>        
-                </dl>
+                </section>
             </footer>
         </div>
     </body>

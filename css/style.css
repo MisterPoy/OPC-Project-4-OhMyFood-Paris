@@ -36,16 +36,20 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Shrikhand", serif;
-  font-size: 28px;
-  font-weight: 400;
-}
-
 a {
   color: inherit;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 h2 {
@@ -70,6 +74,13 @@ h5 {
   font-family: "Roboto", serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+h6 {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 header {
@@ -324,9 +335,7 @@ footer {
   padding-bottom: 25px;
 }
 footer .footer-logo {
-  font-family: "Shrikhand", serif;
-  font-size: 18px;
-  font-weight: 400;
+  display: block;
   padding: 20px 0 20px 0;
   color: #FFFFFF;
   margin-left: 30px;
@@ -366,20 +375,6 @@ footer .footer--linkcontainer .footer--link_i {
   width: 100%;
   aspect-ratio: 4/3;
   background-size: cover;
-  /*.banner--img {
-          background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-          background-size: cover;
-          width: 100%;
-          aspect-ratio: 4 / 1.8;
-          object-fit: cover;
-  }*/
-  /*.banner--radius-bottom {
-      height: 30px;
-      background-color: #F6F6F6; 
-      border-radius: 25px 25px 0 0;
-      border: dashed red;
-      background-clip: border-box;
-  }*/
 }
 .banner-container_restaurant1 {
   background-position: 50% 60%;
@@ -557,6 +552,9 @@ footer .footer--linkcontainer .footer--link_i {
   }
 }
 @media (min-width: 768px) {
+  .banner-container {
+    aspect-ratio: 16/8;
+  }
   .informations .informations--cards {
     flex-direction: row;
   }
@@ -613,6 +611,9 @@ footer .footer--linkcontainer .footer--link_i {
   }
 }
 @media (min-width: 1024px) {
+  .banner-container {
+    aspect-ratio: 16/5;
+  }
   .informations {
     margin: 50px 150px;
   }
@@ -642,5 +643,22 @@ footer .footer--linkcontainer .footer--link_i {
     margin-left: 33px;
   }
 }
+/*
+.menu--section_entrees {
+    animation-name: entrees;
+    animation-duration: 4s;
+}
+
+@keyframes entrees {
+    from {
+        margin-right: 100vh;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+
+} */
 
 /*# sourceMappingURL=style.css.map */
