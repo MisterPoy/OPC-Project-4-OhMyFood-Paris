@@ -99,10 +99,13 @@
         padding: 45px 100px 15px 0px;
         .footer--container {
             gap: 50px;
-        }
-            .footer-logo {
-                margin-left: 33px;
+            .footer--linkcontainer {            
+                gap: 45px;
             }
+        }
+        .footer-logo {
+            margin-left: 33px;
+        }
     }
 }
 
