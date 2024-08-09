@@ -1,0 +1,21 @@
+/***************** HEADER ************************/
+
+header {
+    @include center;
+    @include box-shadow-bottom;
+    width: 100%;
+    height: 63px;
+    position: relative;
+    .go-back {
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+    }
+    span.logo {
+        font-family: "Shrikhand", serif;
+        font-size: 40px;
+        font-weight: 400;
+    }   
+ }

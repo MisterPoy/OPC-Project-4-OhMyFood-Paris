@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
 }
 
+/************** MIXINES ****************/
 .heart--i {
   display: flex;
   justify-content: center;
@@ -83,6 +84,7 @@ h6 {
   color: #FFFFFF;
 }
 
+/***************** HEADER ************************/
 header {
   display: flex;
   justify-content: center;
@@ -106,6 +108,7 @@ header span.logo {
   font-weight: 400;
 }
 
+/************** HOME PAGE LOCATION BANNER ******************/
 .location {
   height: 50px;
   display: flex;
@@ -136,6 +139,7 @@ header span.logo {
   color: #353535;
 }
 
+/***************** HOME PAGE PRESENTATION SECTION ****************/
 .presentation {
   display: flex;
   flex-direction: column;
@@ -179,6 +183,7 @@ header span.logo {
   display: none;
 }
 
+/*********** HOME PAGE FONCTIONNEMENT SECTION **************/
 .informations {
   display: flex;
   flex-direction: column;
@@ -236,6 +241,7 @@ header span.logo {
   color: #9356DC;
 }
 
+/************ HOME PAGE RESTAURANTS SECTION *******************/
 #restaurants {
   display: flex;
   flex-direction: column;
@@ -330,6 +336,7 @@ header span.logo {
   gap: 5px;
 }
 
+/*************** FOOTER ****************/
 footer {
   background-color: #353535;
   padding-bottom: 25px;
@@ -365,6 +372,7 @@ footer .footer--linkcontainer .footer--link_i {
   height: 100%;
 }
 
+/**** RESTAURANTS PAGE *********/
 .restaurants--main {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,115 @@
+
+@media (min-width: 600px) {
+    #restaurants .restaurants--cardcontent {
+      gap: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .banner-container {
+        aspect-ratio: 16 / 8;
+    }
+    .informations {
+        .informations--cards {
+        flex-direction: row;
+        }
+        .informations--button {
+            gap: 10px;
+            padding-left: 15px;
+        }
+    }
+    #restaurants {
+        padding: 30px 80px 30px 80px;
+        .restaurants--cardsbox {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+                a {
+                width: 48%;
+                }
+            }
+        .restaurants--cardcontent {
+            gap: 5px;
+        }    
+    }
+    footer {
+        padding-bottom: 0;
+        padding-top: 35px;
+        padding-right: 35px;    
+        .footer--container {
+            display: flex;
+            flex-direction: row-reverse;
+            .footer-logo {
+                margin-left: 33px;
+                padding-top: 5px;
+            }
+            .footer--linkcontainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                .separate {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        padding: 0 100px 0 100px;
+        .menu--title {
+           justify-content: center;
+           padding-right: 0;
+            
+        }
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .banner-container {
+        aspect-ratio: 16 / 5;
+    }
+    .informations {
+        margin: 50px 150px;
+        .informations--button {
+        gap: 10px;
+        padding-left: 15px;
+        }
+    }
+    #restaurants {
+        padding: 30px 150px 30px 150px;
+        .restaurants--cardsbox {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            a {
+                width: 48%;
+            }
+    }
+    }
+    footer {
+        padding: 45px 100px 15px 0px;
+        .footer--container {
+            gap: 50px;
+        }
+            .footer-logo {
+                margin-left: 33px;
+            }
+    }
+}
+
+@media (min-width: 1440px) {
+    #restaurants .restaurants--cardcontent {
+        .card-txt {
+        gap: 15px;
+        }
+    }
+}
