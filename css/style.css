@@ -441,7 +441,7 @@ footer .footer--linkcontainer .footer--link_i {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   cursor: pointer;
   overflow: hidden;
-  transition: all 750ms;
+  transition: all 500ms;
 }
 .menu--section .menu--button:hover {
   padding-right: 60px;
@@ -557,23 +557,19 @@ footer .footer--linkcontainer .footer--link_i {
 
 /*********** menu animations ********************/
 .menu--button {
-  animation: 2s linear 0.5s menuloader;
-}
-
-.menu--button1 {
-  animation-delay: 250ms;
+  animation: 1.25s linear 0s menuloader;
 }
 
 .menu--button2 {
-  animation-delay: 500ms;
+  animation-delay: 250ms;
 }
 
 .menu--button3 {
-  animation-delay: 750ms;
+  animation-delay: 500ms;
 }
 
 .menu--button4 {
-  animation-delay: 1000ms;
+  animation-delay: 750ms;
 }
 
 @keyframes menuloader {

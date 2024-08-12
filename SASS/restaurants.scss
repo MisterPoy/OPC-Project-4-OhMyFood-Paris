@@ -86,7 +86,7 @@
         @include box-shadow-button (0px 4px 10px 0px #00000040);
         cursor: pointer;
         overflow: hidden;
-        transition: all 750ms;
+        transition: all 500ms;
         &:hover {
             padding-right: 60px;
         }
