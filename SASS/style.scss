@@ -6,18 +6,17 @@
 
 @import 'base';
 
+@import 'loader.scss';
+
 @import 'header';
 
 @import 'home-page';
 
 @import 'footer';
 
-@import 'restaurants.scss';
+@import 'restaurants';
 
-@import 'animations.scss';
+@import 'animations';
 
-@import 'media-queries.scss';
-
-
-
+@import 'media-queries';
 

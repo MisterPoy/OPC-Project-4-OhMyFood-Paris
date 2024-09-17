@@ -39,18 +39,19 @@
     padding: 35px;
     a.presentation--button  {
         @include gradient-button   
-    }
-        h2 {
-            text-align: center;
         }
-        p {font-family: "Roboto", serif;
+    h2 {
+         text-align: center;
+    }
+    p {
+        font-family: "Roboto", serif;
         font-size: 18px;
         font-weight: 300;
         text-align: center;
-        }
-        br {
-            display: none;
-        }
+    }
+    br {
+        display: none;
+    }
             
 }
 
