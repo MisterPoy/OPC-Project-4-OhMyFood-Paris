@@ -121,6 +121,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   position: relative;
   text-align: center;
   width: 100%;
@@ -131,7 +132,7 @@ h6 {
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: text;
   animation: fadeInOutScale 3s forwards;
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Shrikhand", sans-serif;
   font-weight: 900;
   white-space: nowrap;
