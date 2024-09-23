@@ -2,9 +2,11 @@
 
 @import 'variables';
 
+@import 'base';
+
 @import 'mixins';
 
-@import 'base';
+@import 'restaurants';
 
 @import 'loader.scss';
 
@@ -14,9 +16,7 @@
 
 @import 'footer';
 
-@import 'restaurants';
 
 @import 'animations';
 
 @import 'media-queries';
-

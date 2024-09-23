@@ -9,7 +9,6 @@ li {
   list-style: none;
 }
 
-/************** MIXINES ****************/
 body {
   position: relative;
   background-color: inherit;
@@ -62,6 +61,190 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
+}
+
+/************** MIXINES ****************/
+/**** RESTAURANTS PAGE *********/
+.restaurants--main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+}
+.banner-container_restaurant1 {
+  background-position: 50% 60%;
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.banner-container_restaurant2 {
+  background-position: 50% 60%;
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.banner-container_restaurant3 {
+  background-position: 50% 60%;
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.banner-container_restaurant4 {
+  background-position: 50% 60%;
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.menu {
+  background-color: #F6F6F6;
+  width: 100%;
+  max-width: 1024px;
+  padding: 10px 17px 0 17px;
+  position: relative;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  top: -49px;
+  left: 0;
+  right: 0;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 50px;
+  border-radius: 50px 50px 0 0;
+}
+.menu .menu--title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+  gap: 20px;
+  position: relative;
+}
+
+.menu--section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0 30px 0;
+}
+.menu--section_title {
+  position: relative;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 6px;
+  z-index: 0;
+}
+.menu--section_title::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+  z-index: 1;
+}
+.menu--section .menu--button {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 69px;
+  padding-right: 15px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.menu--section .menu--button:hover {
+  padding-right: 60px;
+}
+.menu--section .menu--button-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu--section .menu--button-content .button--txt {
+  font-family: "Roboto", serif;
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu--section .menu--button-content .button--title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu--section .menu--button .price {
+  font-family: "Roboto", serif;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  height: 100%;
+  transition: all 750ms;
+}
+.menu--section .menu--button::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -60px;
+  min-width: 59px;
+  height: 100%;
+  font-family: "Font Awesome 6 Free";
+  font-size: 20px;
+  content: "\f058";
+  font-weight: 900;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  transition: all 750ms;
+}
+.menu--section .menu--button:hover::after {
+  right: 0px;
+  transition: all 750ms;
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  background-color: #F6F6F6;
+}
+.commander .command--button {
+  position: relative;
+  width: 218px;
+  height: 50px;
+  margin: 20px;
+  font-family: "Roboto", serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 700ms;
+}
+.commander .command--button:hover {
+  opacity: 0.7;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .loaderContainer {
@@ -480,187 +663,6 @@ footer .footer--linkcontainer .footer--link_txt {
 }
 footer .footer--linkcontainer .footer--link_i {
   height: 100%;
-}
-
-/**** RESTAURANTS PAGE *********/
-.restaurants--main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.banner-container {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background-size: cover;
-}
-.banner-container_restaurant1 {
-  background-position: 50% 60%;
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.banner-container_restaurant2 {
-  background-position: 50% 60%;
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.banner-container_restaurant3 {
-  background-position: 50% 60%;
-  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-.banner-container_restaurant4 {
-  background-position: 50% 60%;
-  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-
-.menu {
-  background-color: #F6F6F6;
-  width: 100%;
-  max-width: 1024px;
-  padding: 10px 17px 0 17px;
-  position: relative;
-}
-.menu::before {
-  content: "";
-  position: absolute;
-  top: -49px;
-  left: 0;
-  right: 0;
-  background-color: #F6F6F6;
-  width: 100%;
-  height: 50px;
-  border-radius: 50px 50px 0 0;
-}
-.menu .menu--title {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 25px;
-  gap: 20px;
-  position: relative;
-}
-
-.menu--section {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 30px 0 30px 0;
-}
-.menu--section_title {
-  position: relative;
-  font-family: "Roboto", serif;
-  font-weight: 300;
-  font-size: 16px;
-  padding-bottom: 6px;
-  z-index: 0;
-}
-.menu--section_title::after {
-  content: "";
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  height: 3px;
-  width: 40px;
-  background-color: #99E2D0;
-  z-index: 1;
-}
-.menu--section .menu--button {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  height: 69px;
-  padding-right: 15px;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 500ms;
-}
-.menu--section .menu--button:hover {
-  padding-right: 60px;
-}
-.menu--section .menu--button-content {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 15px;
-  align-self: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu--section .menu--button-content .button--txt {
-  font-family: "Roboto", serif;
-  font-size: 15px;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu--section .menu--button-content .button--title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu--section .menu--button .price {
-  font-family: "Roboto", serif;
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 15px;
-  height: 100%;
-  transition: all 750ms;
-}
-.menu--section .menu--button::after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: -60px;
-  min-width: 59px;
-  height: 100%;
-  font-family: "Font Awesome 6 Free";
-  font-size: 20px;
-  content: "\f058";
-  font-weight: 900;
-  color: #FFFFFF;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  overflow: hidden;
-}
-.menu--section .menu--button:hover::after {
-  right: 0px;
-}
-
-.commander {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-  background-color: #F6F6F6;
-}
-.commander .command--button {
-  position: relative;
-  width: 218px;
-  height: 50px;
-  margin: 20px;
-  font-family: "Roboto", serif;
-  text-decoration: none;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 700ms;
-}
-.commander .command--button:hover {
-  opacity: 0.7;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 /************ heart animation *************/
